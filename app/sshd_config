@@ -1,0 +1,16 @@
+HostKey /hostkeys/etc/ssh/ssh_host_rsa_key
+HostKey /hostkeys/etc/ssh/ssh_host_ecdsa_key
+HostKey /hostkeys/etc/ssh/ssh_host_ed25519_key
+
+AuthorizedKeysFile .ssh/authorized_keys
+
+PermitRootLogin no
+PasswordAuthentication no
+
+AllowAgentForwarding no
+AllowTcpForwarding no
+GatewayPorts no
+X11Forwarding no
+PermitTTY no
+PrintMotd no
+PermitTunnel no

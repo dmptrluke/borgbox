@@ -1,0 +1,25 @@
+---
+version: "3.8"
+
+networks:
+  primary:
+
+services:
+  borgbox:
+    image: dmptrluke/borgbox:latest
+    build:
+      context: ./app
+    networks:
+      - primary
+    ports:
+      - 2222:2222
+    volumes:
+      - ./config:/config
+      - ./data:/data
+      - hostkeys:/hostkeys
+    environment:
+      TZ: Pacific/Auckland
+
+volumes:
+  hostkeys:
+
