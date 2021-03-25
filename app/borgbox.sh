@@ -6,14 +6,14 @@ mkdir -p "/hostkeys/etc/ssh/"
 rm -rf /home/borg/.ssh/*
 
 # recreate keys 
-for file in /config/*.pub; do
+for file in /config/hosts/*.pub; do
     [ -e "$file" ] || continue
     name=$(basename "${file}" .pub)
     key=$(<$file)
     
     mkdir -p "/data/$name"
 
-    line="command=\"cd /data/${name};borg serve --restrict-to-path /data/${name}\",restrict ${key}"
+    line="command=\"cd /data/${name};borg serve --restrict-to-repository /data/${name}\",restrict ${key}"
     echo "$line" >> "/home/borg/.ssh/authorized_keys"
 done
 

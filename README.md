@@ -23,7 +23,7 @@ volumes:
 ```
 
 ## Configuration 
-BorgBox is configured by mounting a folder of named public keys into the container at `/config`. You will also need to mount a folder at `/data` for the backups to be stored.
+BorgBox is configured by mounting a folder of named public keys into the container at `/config/hosts`. You will also need to mount a folder at `/data` for the backups to be stored.
 
 
 ## License
