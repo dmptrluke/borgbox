@@ -1,4 +1,4 @@
-FROM alpine:3.21.2
+FROM alpine:3.21.3
 
 # install dependencies 
 RUN apk add --no-cache --update openssh-server borgbackup bash tini
