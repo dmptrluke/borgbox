@@ -23,4 +23,7 @@ RUN addgroup -g 1005 borg && adduser borg -D -G borg -h /home/borg -u 1000 && \
 # copy code to work directory
 COPY . ./
 
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
+    CMD nc -z localhost 2222 || exit 1
+
 CMD ["bash", "/code/borgbox.sh"]
