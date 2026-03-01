@@ -28,5 +28,5 @@ chown -R borg:borg /data
 chmod 700 /home/borg/.ssh
 chmod 600 /home/borg/.ssh/authorized_keys
 
-# start ssh server (exec replaces the shell so tini receives signals correctly)
+# start ssh server
 exec /usr/sbin/sshd -D -e -p 2222
