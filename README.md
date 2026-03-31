@@ -3,9 +3,6 @@ A simple, secure [BorgBackup](https://borgbackup.readthedocs.io/en/stable/) repo
 
 To run `borgbox`, you can use the following `docker-compose.yml` file.
 ```yaml
----
-version: "3.8"
-
 services:
   borgbox:
     image: ghcr.io/dmptrluke/borgbox:latest
@@ -30,7 +27,7 @@ BorgBox is configured by mounting a folder of named public keys into the contain
 
 This software is released under the MIT license.
 ```
-Copyright (c) 2020-2021 Luke Rogers
+Copyright (c) 2020-2026 Luke Rogers
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
